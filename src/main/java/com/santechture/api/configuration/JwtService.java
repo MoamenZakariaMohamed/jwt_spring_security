@@ -89,7 +89,6 @@ public class JwtService {
 
     public void logout(String token) {
         blacklistToken(token);
-        // You can also perform additional actions like removing the token from the client-side or marking it as revoked in the database.
     }
 
 }
