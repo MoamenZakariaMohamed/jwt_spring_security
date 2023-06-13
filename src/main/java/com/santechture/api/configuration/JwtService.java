@@ -17,7 +17,8 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.function.Function;
 
-import static java.time.temporal.ChronoUnit.DAYS;
+
+import static java.time.temporal.ChronoUnit.HOURS;
 
 @AllArgsConstructor
 @Service
@@ -52,7 +53,7 @@ public class JwtService {
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(
                         Date.from(
-                                Instant.now().plus(15, DAYS)
+                                Instant.now().plus(1, HOURS)
                         )
                 )
                 .signWith(getSigningKey())
